@@ -1,0 +1,24 @@
+<ion-view title="Selecione uma cidade">
+    <div class="bar bar-header bar-royal">
+        <h1 class="title title-logo">
+            <img src="img/logo.png" alt="" width="100" height="23">
+        </h1>
+    </div>
+    <ion-content class="bg-app has-header ">
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Busque uma cidade">
+            </label>
+        </div>
+
+        <div class="list item-list" ng-controller="CityCtrl">
+            <a ng-repeat="cidade in cidades" href="#/tab/home" class="item item-avatar item-icon-right">
+                <img class="pic" ng-src="{{ cidade.image }}" alt="" class="" height="60" width="60">
+                <h2 class="nome">{{ cidade.nome }}</h2>
+                <p class="regiao">{{ cidade.estado}} - {{ cidade.regiao}}</p>
+                <i class="icon ion-chevron-right"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

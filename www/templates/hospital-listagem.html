@@ -1,0 +1,23 @@
+<ion-view title="listagem de hospitais">
+    <div class="bar bar-header bar-royal">
+
+        <a class="button button-clear icon ion-ios7-arrow-back" href="#/tab/home"></a>
+        <h1 class="title">Hospitais</h1>
+    </div>
+    <ion-content class="has-header  bg-app" >
+       
+        <div class="list item-list">
+            <a ng-repeat="item in items" href="#/tab/hospital-listagem/{{item.id}}" class="item item-avatar item-icon-right">
+                <img class="pic" ng-src="{{ item.image }}">
+                <h2 class="nome">{{item.id}} - {{ item.nome_local }}</h2>
+                <span class="categoria">{{ item.categoria_local }}</span>
+                <i class="icon ion-chevron-right"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
+
+
+
+
+

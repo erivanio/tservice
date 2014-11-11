@@ -1,0 +1,128 @@
+<ion-view title="Comprar">
+    <div class="bar bar-header bar-royal">
+        <a class="button button-clear icon ion-ios7-arrow-back" href="#/tab/comprar-listagem"></a>
+        <h1 class="title title-logo">
+            <img src="img/logo.png" alt="" width="100" height="23">
+        </h1>
+    </div>
+
+    <ion-content class="has-header  bg-app">
+        <div class="list card item-card">
+            <div class="item item-body text-center widget">
+
+                <h2>Teatro 4 de Setembro</h2>
+                <ion-slide-box active-slide="myActiveSlide">
+                    <ion-slide>
+                        <div class="box blue">
+                            <img src="http://www.turismoteresina.com/media/uploads/filebrowser/teatro4.jpg" alt="" width="320" height="200">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box yellow">
+                            <img src="http://www.turismoteresina.com/media/uploads/filebrowser/teatro-dentro.jpg" alt="" width="320" height="200">
+                        </div>
+                    </ion-slide>
+
+                </ion-slide-box>
+
+                <div class="item tabs tabs-secondary tabs-icon-top">
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-location"></i>
+                        Mapa
+                    </a>
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-ios7-telephone"></i>
+                        Telefone
+                    </a>
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-ios7-world"></i>
+                        Site
+                    </a>
+                    <a class="tab-item" ng-click="modal.show()">
+                        <i class="icon ion-compose"></i>
+                        Avaliar
+                    </a>
+                </div>
+            </div>
+
+            <div class="item item-body widget">
+                <p>Localizado na Praça Pedro II, o Teatro 4 de Setembro, há mais de 100 anos, recebe em seu palco atrações nacionais e internacionais, entre elas peças teatrais, espetáculos de dança e shows musicais. Sua fachada é inspirada na arquitetura portuguesa com detalhes greco-romanos. O Teatro 4 de Setembro é interligado ao Clube dos Diários, outro espaço que recebe as mais diversas manifestações culturais. Teresina possui, ainda, outras casas de espetáculos, como o Teatro Municipal João Paulo II, no bairro Dirceu Arcoverde, e o Teatro do Boi, no bairro Matadouro e o Palácio da Música na famosa Rua da Pactuba, cantada por Torquato Neto.</p>
+            </div>
+
+            <div class="list">
+                <div class="item item-button-right">
+                    86 3215-7829
+                    <button class="button button-outline button-royal">
+                        <i class="icon ion-ios7-telephone"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    email@email.com
+                    <button class="button button-outline button-royal">
+                        <i class="icon ion-ios7-email"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    www.site.com.br
+                    <a href="" class="button button-outline button-royal">
+                        <i class="icon ion-ios7-world"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="list widget">
+
+                <h2 class="title-widget"><i class="icon ion-compose"></i> Ultimas avaliações</h2>
+                <p class="no-conteudo">Seja o primeiro a avaliar este local</p>
+                <div class="item item-avaliacao" href="#">
+                    <span>27/10/2014</span>
+                    <h2>"Um dos melhores lugares que ja fui na cidade"</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus gravida leo ac cursus. Donec id.</p>
+                </div>
+                <div class="item item-avaliacao" href="#">
+                    <span>27/10/2014</span>
+                    <h2>"Um dos melhores lugares que ja fui na cidade"</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus gravida leo ac cursus. Donec id.</p>
+                </div>
+                <div class="item item-avaliacao" href="#">
+                    <span>27/10/2014</span>
+                    <h2>"Um dos melhores lugares que ja fui na cidade"</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus gravida leo ac cursus. Donec id.</p>
+                </div>
+
+
+            </div>
+            <button class="button button-block  ion-compose button-royal" ng-click="modal.show()">Fazer avaliação</button>
+        </div>
+    </ion-content>
+</ion-view>
+
+<script id="templates/modal-addavaliacao.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-royal">
+            <h1 class="title">Adicionar</h1>
+            <button class="button button-clear  button-icon ion-close-round" ng-click="modal.hide()"></button>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Nome do local</span>
+                    <input ng-model="newUser.firstName" type="text">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Imagem</span>
+                    <input ng-model="newUser.firstName" type="file">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Comentário</span>
+                    <input ng-model="newUser.firstName" type="text">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Autor</span>
+                    <input ng-model="newUser.lastName" type="text">
+                </label>
+                <button class="button button-full button-royal button icon-left ion-checkmark-round button-positive" ng-click="createContact(newUser)">Salvar</button>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>

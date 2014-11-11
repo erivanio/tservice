@@ -1,0 +1,48 @@
+<ion-view title="cidade" left-buttons="leftButtons" ng-controller="galeriaFotosCtrl">
+    <div class="bar bar-header bar-royal">
+        <a class="button button-clear icon ion-ios7-arrow-back" href="#/tab/home"></a>
+        <h1 class="title">Fotos</h1>
+        <button class="button button-icon ion-plus-round" ng-click="modal.show()"></button>
+    </div>
+
+    <ion-content class="has-header  bg-app" ng-controller="galeriaFotosCtrl">
+        <div class="list card" ng-repeat="foto in fotos">
+            <div class="item item-body widget">
+                <h2 class="text-center">{{ foto.nome }}</h2>
+                <img class="full-image" ng-src="{{ foto.image }}">
+                <p>{{ foto.info }}</p>
+                <p>by {{ foto.autor }}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+<script id="templates/modal-addfotos.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-royal">
+            <h1 class="title">Adicionar</h1>
+            <button class="button button-clear  button-icon ion-close-round" ng-click="modal.hide()"></button>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Nome do local</span>
+                    <input ng-model="newUser.firstName" type="text">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Imagem</span>
+                    <input ng-model="newUser.firstName" type="file">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Comentário</span>
+                    <input ng-model="newUser.firstName" type="text">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Autor</span>
+                    <input ng-model="newUser.lastName" type="text">
+                </label>
+                <button class="button button-full button-royal button icon-left ion-checkmark-round button-positive" ng-click="createContact(newUser)">Salvar</button>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
